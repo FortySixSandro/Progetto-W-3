@@ -162,6 +162,11 @@ header {
     border-radius: 6px;
 }
 
+.canzone-cover img:hover{
+    transform: scaleX(-1);
+    transition: all 0.4s cubic-bezier(.215, .61, .355, 1)
+}
+
 .canzone-info {
     width: 45%;
 }
@@ -210,4 +215,9 @@ header {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.preferito:hover{
+    font-size: 22px;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1)
 }
