@@ -36,7 +36,7 @@ img {
     --badge-sfondo: #E0E7FF;
 }
 
-:root.dark{
+:root.scuro{
 --colore-principale: #818CF8;
 --testo: #E5E7EB;
 --sfondo-pagina: #111827;
