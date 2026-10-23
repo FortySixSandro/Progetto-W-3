@@ -36,6 +36,17 @@ img {
     --badge-sfondo: #E0E7FF;
 }
 
+:root.dark{
+--colore-principale: #818CF8;
+--testo: #E5E7EB;
+--sfondo-pagina: #111827;
+--sfondo-card: #1F2937;
+--bordi: #374151;
+--accent: #34D399;
+--stelle: #F59E0B;
+--badge-sfondo: #312E81;
+}
+
 /**/
 body {
     font-family: "Fjalla One", sans-serif;
@@ -182,3 +193,5 @@ header {
     border: none;
     cursor: pointer;
 }
+
+/* TEMA SCURO */
