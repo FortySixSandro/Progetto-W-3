@@ -28,10 +28,9 @@ img {
 :root {
     --colore-principale: #6366F1;
     --testo: #1F2937;
-    --sfondo-pagina: ;
+    --sfondo-pagina: #F8FAFC;
     --sfondo-card: #FFFFFF;
     --bordi: #E2E8F0;
-    --accent: #10B981;
     --stelle: #F59E0B;
     --badge-sfondo: #E0E7FF;
     --attivo-sfondo: #111827;
@@ -43,7 +42,6 @@ img {
 --sfondo-pagina: #111827;
 --sfondo-card: #1F2937;
 --bordi: #374151;
---accent: #34D399;
 --stelle: #F59E0B;
 --badge-sfondo: #312E81;
 --attivo-sfondo: #818CF8;
@@ -200,8 +198,8 @@ header {
 }
 
 .badge[data-genere = 'Progressive Metal']{
-    background-color: var(--accent);
-    color: var(--attivo-testo);
+    background-color: var(--badge-sfondo);
+    color: var(--testo);
 }
 
 .stelle {
