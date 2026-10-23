@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist di Sandro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    
+
+    <main>
+        <header>
+            <div class="titolo">
+                <h1><span><i class="fa-brands fa-itunes-note"></i></span>Playlist di Sandro</h1>
+            </div>
+            <button id="theme-button" class="theme-button" type="button">ICONA</button>
+        </header>
+
+
+        <div class="search-box">
+            <input aria-label="Cerca per titolo o artista" id="search-input" placeholder="Cerca per titolo o artista..."
+                type="text">
+        </div>
+        <div class="option-menu">
+            <button id="favoritesButton" class="main-button"><i class="fa-regular fa-star"></i>Preferiti</button>
+            <select aria-label="Genere" name="generi" id="generi">
+                <option value="tutti i generi">Tutti i generi</option>
+                <option value="progressive-metal">Progressive Metal</option>
+                <option value="metal">Metal</option>
+                <option value="rock">Rock</option>
+                <option value="anni">Anni '80 &amp; '90</option>
+            </select>
+        </div>
+
+        <div class="titles-container" id="titles-container"></div>
+
+
+
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
