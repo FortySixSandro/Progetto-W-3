@@ -3,13 +3,13 @@
 const canzoni = [
     { id: 1, artista: 'Deftones', titolo: 'Be Quiet and Drive (Far Away)', genere: 'Metal', voto: 4, cover: 'assets/img/deftones.jpg', preferito: false },
     { id: 2, artista: 'Deftones', titolo: 'My Own Summer (Shove It)', genere: 'Metal', voto: 4, cover: 'assets/img/deftones.jpg', preferito: false },
-    { id: 3, artista: 'Deftones', titolo: 'Entombed', genere: 'Metal', voto: 3, cover: 'assets/img/deftones2.jpg', preferito: false },
-    { id: 4, artista: 'Red Hot Chili Peppers', titolo: 'Snow (Hey Oh)', genere: 'Rock', voto: 5, cover: 'assets/img/rhcp1.jpg', preferito: false },
+    { id: 3, artista: 'Deftones', titolo: 'Entombed', genere: 'Metal', voto: 5, cover: 'assets/img/deftones2.jpg', preferito: false },
+    { id: 4, artista: 'Red Hot Chili Peppers', titolo: 'Snow (Hey Oh)', genere: 'Rock', voto: 4, cover: 'assets/img/rhcp1.jpg', preferito: false },
     { id: 5, artista: 'Red Hot Chili Peppers', titolo: 'Scar Tissue', genere: 'Rock', voto: 4, cover: 'assets/img/rhcp2.jpg', preferito: false },
-    { id: 6, artista: 'Red Hot Chili Peppers', titolo: 'I Could Have Lied', genere: 'Rock', voto: 3, cover: 'assets/img/rhcp3.jpg', preferito: false },
+    { id: 6, artista: 'Red Hot Chili Peppers', titolo: 'I Could Have Lied', genere: 'Rock', voto: 4, cover: 'assets/img/rhcp3.jpg', preferito: false },
     { id: 7, artista: 'TOOL', titolo: 'Sober', genere: 'Progressive Metal', voto: 5, cover: 'assets/img/tool3.jpg', preferito: false },
-    { id: 8, artista: 'TOOL', titolo: 'Schism', genere: 'Progressive Metal', voto: 5, cover: 'assets/img/tool2.jpg', preferito: false },
-    { id: 9, artista: 'TOOL', titolo: 'H.', genere: 'Progressive Metal', voto: 4, cover: 'assets/img/tool1.jpg', preferito: false }
+    { id: 8, artista: 'TOOL', titolo: 'Schism', genere: 'Progressive Metal', voto: 4, cover: 'assets/img/tool2.jpg', preferito: false },
+    { id: 9, artista: 'TOOL', titolo: 'H.', genere: 'Progressive Metal', voto: 5, cover: 'assets/img/tool1.jpg', preferito: false }
 ];
 
 //
@@ -57,6 +57,7 @@ function mostraCanzoni(lista) {
         const badge = document.createElement('span');
         badge.className = 'badge';
         badge.textContent = c.genere;
+        badge.dataset.genere = c.genere;
 
         const bottone = document.createElement('button');
         bottone.className = 'preferito';

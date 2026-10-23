@@ -28,13 +28,14 @@ img {
 :root {
     --colore-principale: #6366F1;
     --testo: #1F2937;
-    --sfondo-pagina: #F8FAFC;
+    --sfondo-pagina: ;
     --sfondo-card: #FFFFFF;
     --bordi: #E2E8F0;
     --accent: #10B981;
     --stelle: #F59E0B;
     --badge-sfondo: #E0E7FF;
-}
+    --attivo-sfondo: #111827;
+    --attivo-testo: #fff;}
 
 :root.scuro{
 --colore-principale: #818CF8;
@@ -45,6 +46,8 @@ img {
 --accent: #34D399;
 --stelle: #F59E0B;
 --badge-sfondo: #312E81;
+--attivo-sfondo: #818CF8;
+--attivo-testo: #F8FAFC;
 }
 
 /**/
@@ -129,6 +132,11 @@ header {
     cursor: pointer;
 }
 
+.attivo{
+    background-color: var(--attivo-sfondo);
+    color: var(--attivo-testo);
+}
+
 /* CANZONE */
 .canzone {
     padding: 10px;
@@ -179,6 +187,16 @@ header {
     color: var(--colore-principale);
     background-color: var(--badge-sfondo);
     border-radius: 12px;
+}
+
+.badge[data-genere = 'Rock']{
+    background-color: #e63946;
+    color: var(--attivo-testo);
+}
+
+.badge[data-genere = 'Progressive Metal']{
+    background-color: var(--accent);
+    color: var(--attivo-testo);
 }
 
 .stelle {
