@@ -1,3 +1,7 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
 /* RESET */
 * {
     box-sizing: border-box;
@@ -33,3 +37,50 @@ img {
 }
 
 /**/
+body {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 16px;
+    color: var(--testo);
+    background-color: var(--sfondo-pagina);
+    padding: 20px;
+}
+
+main {
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--sfondo-card);
+}
+
+/* HEADER */
+header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.titolo h1 {
+    width: 45%;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid var(--colore-principale);
+    border-radius: 8px;
+}
+
+.theme-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 8px 14px;
+    color: var(--testo);
+    background-color: var(--sfondo-pagina);
+    border: 1px solid var(--bordi);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.main-button svg {
+    margin-right: 6px;
+    font-size: 12px;
+}
