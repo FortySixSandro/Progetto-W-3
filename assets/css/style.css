@@ -101,6 +101,16 @@ header {
     font-size: 12px;
 }
 
+.hint {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--testo-secondario);
+}
+
+#addButton {
+    margin-top: 10px;
+}
+
 /* RICERCA E FILTRI */
 .search-box {
     margin-bottom: 15px;
