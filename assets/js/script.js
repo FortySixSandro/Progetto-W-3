@@ -24,10 +24,11 @@ function mostraCanzoni(lista) {
     contenitore.innerHTML = '';
 
     lista.forEach(function (c) {
+        //riga intera
         const canzone = document.createElement('div');
         canzone.className = 'canzone';
 
-        // copertina
+        //copertina
         const cover = document.createElement('div');
         cover.className = 'canzone-cover';
 
@@ -36,7 +37,7 @@ function mostraCanzoni(lista) {
         img.alt = `Copertina di ${c.titolo}`;
         cover.appendChild(img);
 
-        // titolo e artista
+        //titolo e artista
         const info = document.createElement('div');
         info.className = 'canzone-info';
 
@@ -48,11 +49,50 @@ function mostraCanzoni(lista) {
 
         info.appendChild(titolo);
         info.appendChild(artista);
+
+        //genere, stelle, cuore
+        const extra = document.createElement('div');
+        extra.className = 'canzone-extra';
+
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = c.genere;
+
+        const bottone = document.createElement('button');
+        bottone.className = 'preferito';
+        bottone.type = 'button';
+        bottone.dataset.id = c.id;
+        bottone.setAttribute('aria-label', 'Aggiungi o rimuovi dai preferiti');
+
+        const cuore = document.createElement('i');
+        cuore.className = (c.preferito ? 'fa-solid' : 'fa-regular') + ' fa-heart';
+        bottone.appendChild(cuore);
+
+        extra.appendChild(badge);
+        extra.appendChild(creaStelle(c.voto));
+        extra.appendChild(bottone);
+
         canzone.appendChild(cover);
         canzone.appendChild(info);
+        canzone.appendChild(extra);
         contenitore.appendChild(canzone);
     });
 }
+
+function creaStelle(voto) {
+    const stelle = document.createElement('span');
+    stelle.className = 'stelle';
+    stelle.setAttribute('aria-label', `Voto: ${voto} stelle su 5`);
+
+    for (let i = 1; i <= 5; i++) {
+        const stella = document.createElement('i');
+        stella.className = i <= voto ? 'fa-solid fa-star' : 'fa-regular fa-star';
+        stelle.appendChild(stella);
+    }
+
+    return stelle;
+}
+
 mostraCanzoni(canzoni);
 
 bottoneTema.addEventListener('click', function () {
@@ -66,3 +106,4 @@ bottoneTema.addEventListener('click', function () {
     icona.className = scuro ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
 
 });
+
