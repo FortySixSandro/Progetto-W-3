@@ -117,3 +117,18 @@ header {
     border-radius: 8px;
     cursor: pointer;
 }
+
+/* CANZONE */
+.canzone {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid var(--bordi);
+    border-radius: 8px;
+}
+
+.canzone-cover,
+.canzone-info,
+.canzone-extra {
+    display: inline-block;
+    vertical-align: middle;
+}
