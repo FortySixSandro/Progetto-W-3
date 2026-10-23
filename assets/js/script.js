@@ -93,7 +93,45 @@ function creaStelle(voto) {
     return stelle;
 }
 
-mostraCanzoni(canzoni);
+let soloPreferiti = false;
+
+function aggiorna() {
+    const testo = inputRicerca.value.toLowerCase();
+    const genere = selectGenere.value;
+
+    const risultato = canzoni.filter(function (c) {
+        const matchTesto = c.titolo.toLowerCase().includes(testo)
+            || c.artista.toLowerCase().includes(testo);
+        const matchGenere = genere === 'tutti i generi' || c.genere === genere;
+        const matchPreferiti = !soloPreferiti || c.preferito;
+
+        return matchTesto && matchGenere && matchPreferiti;
+    });
+
+    mostraCanzoni(risultato);
+}
+
+inputRicerca.addEventListener('input', aggiorna);
+selectGenere.addEventListener('change', aggiorna);
+
+bottonePreferiti.addEventListener('click', function () {
+    soloPreferiti = !soloPreferiti;
+    bottonePreferiti.classList.toggle('attivo');
+    aggiorna();
+});
+
+contenitore.addEventListener('click', function (e) {
+    const bottone = e.target.closest('.preferito');
+    if (!bottone) return;
+
+    const id = Number(bottone.dataset.id);
+    const canzone = canzoni.find(function (c) {
+        return c.id === id;
+    });
+
+    canzone.preferito = !canzone.preferito;
+    aggiorna();
+});
 
 bottoneTema.addEventListener('click', function () {
     const icona = bottoneTema.querySelector('i');
@@ -106,4 +144,4 @@ bottoneTema.addEventListener('click', function () {
     icona.className = scuro ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
 
 });
-
+mostraCanzoni(canzoni);
