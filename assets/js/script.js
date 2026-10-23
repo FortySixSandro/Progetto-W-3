@@ -12,4 +12,45 @@ const canzoni = [
     { id: 9, artista: 'TOOL', titolo: 'H.', genere: 'Progressive Metal', voto: 4, cover: 'assets/img/tool.jpg', preferito: false }
 ];
 
+//
+const contenitore = document.getElementById('titles-container');
+const inputRicerca = document.getElementById('search-input');
+const selectGenere = document.getElementById('generi');
+const bottonePreferiti = document.getElementById('favoritesButton');
+const bottoneTema = document.getElementById('theme-button');
 
+
+function mostraCanzoni(lista) {
+    contenitore.innerHTML = '';
+
+    lista.forEach(function (c) {
+        const canzone = document.createElement('div');
+        canzone.className = 'canzone';
+
+        // copertina
+        const cover = document.createElement('div');
+        cover.className = 'canzone-cover';
+
+        const img = document.createElement('img');
+        img.src = c.cover;
+        img.alt = `Copertina di ${c.titolo}`;
+        cover.appendChild(img);
+
+        // titolo e artista
+        const info = document.createElement('div');
+        info.className = 'canzone-info';
+
+        const titolo = document.createElement('h3');
+        titolo.textContent = c.titolo;
+
+        const artista = document.createElement('p');
+        artista.textContent = c.artista;
+
+        info.appendChild(titolo);
+        info.appendChild(artista);
+        canzone.appendChild(cover);
+        canzone.appendChild(info);
+        contenitore.appendChild(canzone);
+    });
+}
+mostraCanzoni(canzoni);
