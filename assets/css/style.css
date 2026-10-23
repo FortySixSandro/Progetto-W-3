@@ -20,4 +20,16 @@ img {
     height: auto;
 }
 
+/* ROOT COLORI */
+:root {
+    --colore-principale: #6366F1;
+    --testo: #1F2937;
+    --sfondo-pagina: #F8FAFC;
+    --sfondo-card: #FFFFFF;
+    --bordi: #E2E8F0;
+    --accent: #10B981;
+    --stelle: #F59E0B;
+    --badge-sfondo: #E0E7FF;
+}
+
 /**/
