@@ -68,6 +68,10 @@ header {
     border-radius: 8px;
 }
 
+.titolo svg {
+    margin-right: 6px;
+}
+
 .theme-button {
     position: absolute;
     top: 50%;
@@ -83,4 +87,33 @@ header {
 .main-button svg {
     margin-right: 6px;
     font-size: 12px;
+}
+
+/* RICERCA E FILTRI */
+.search-box {
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    color: var(--testo);
+    background-color: var(--sfondo-card);
+    border: 1px solid var(--bordi);
+    border-radius: 8px;
+}
+
+.option-menu {
+    margin-bottom: 20px;
+}
+
+.main-button,
+#generi {
+    padding: 10px 14px;
+    margin-right: 10px;
+    color: var(--testo);
+    background-color: var(--sfondo-pagina);
+    border: 1px solid var(--bordi);
+    border-radius: 8px;
+    cursor: pointer;
 }
