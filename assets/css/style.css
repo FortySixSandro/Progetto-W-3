@@ -28,6 +28,7 @@ img {
 :root {
     --colore-principale: #6366F1;
     --testo: #1F2937;
+    --testo-secondario: #6B7280;
     --sfondo-pagina: #F8FAFC;
     --sfondo-card: #FFFFFF;
     --bordi: #E2E8F0;
@@ -39,6 +40,7 @@ img {
 :root.scuro{
 --colore-principale: #818CF8;
 --testo: #E5E7EB;
+--testo-secondario: #6B7280;
 --sfondo-pagina: #111827;
 --sfondo-card: #1F2937;
 --bordi: #374151;
