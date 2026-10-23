@@ -18,7 +18,7 @@ const inputRicerca = document.getElementById('search-input');
 const selectGenere = document.getElementById('generi');
 const bottonePreferiti = document.getElementById('favoritesButton');
 const bottoneTema = document.getElementById('theme-button');
-
+const bottoneAggiungi = document.getElementById('addButton');
 
 function mostraCanzoni(lista) {
     contenitore.innerHTML = '';
@@ -142,5 +142,34 @@ bottoneTema.addEventListener('click', function () {
         ? '<i class="fa-solid fa-sun"></i>'
         : '<i class="fa-solid fa-moon"></i>';
 
+});
+
+bottoneAggiungi.addEventListener('click', function () {
+    const parti = inputRicerca.value.split(' - ');
+    const genere = selectGenere.value;
+
+    if (parti.length < 2 || parti[0].trim() === '' || parti[1].trim() === '') {
+        alert('Scrivi nella barra: Artista - Titolo');
+        return;
+    }
+
+    if (genere === 'tutti i generi') {
+        alert('Scegli prima un genere dal menu');
+        return;
+    }
+
+    const nuova = {
+        id: canzoni.length + 1,
+        artista: parti[0].trim(),
+        titolo: parti[1].trim(),
+        genere: genere,
+        voto: 0,
+        cover: 'assets/img/Senza titolo.jpg',
+        preferito: false
+    };
+
+    canzoni.push(nuova);
+    inputRicerca.value = '';
+    aggiorna();
 });
 mostraCanzoni(canzoni);
