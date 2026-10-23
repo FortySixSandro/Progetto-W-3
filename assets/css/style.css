@@ -132,3 +132,53 @@ header {
     display: inline-block;
     vertical-align: middle;
 }
+
+.canzone-cover {
+    width: 15%;
+}
+
+.canzone-cover img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+}
+
+.canzone-info {
+    width: 45%;
+}
+
+.canzone-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.canzone-info p {
+    color: #c0c0c0;
+}
+
+.canzone-extra {
+    width: 35%;
+    text-align: right;
+}
+
+.badge {
+    padding: 4px 10px;
+    margin-right: 10px;
+    font-size: 0.85rem;
+    color: var(--colore-principale);
+    background-color: var(--badge-sfondo);
+    border-radius: 12px;
+}
+
+.stelle {
+    margin-right: 10px;
+    color: var(--stelle);
+}
+
+.preferito {
+    font-size: 1.2rem;
+    color: var(--testo);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
