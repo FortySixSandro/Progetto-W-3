@@ -134,14 +134,12 @@ contenitore.addEventListener('click', function (e) {
 });
 
 bottoneTema.addEventListener('click', function () {
-    const icona = bottoneTema.querySelector('i');
-
-    console.log('Clic ricevuto:', icona);
-
     document.documentElement.classList.toggle('scuro');
 
     const scuro = document.documentElement.classList.contains('scuro');
-    icona.className = scuro ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    bottoneTema.innerHTML = scuro
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
 
 });
 mostraCanzoni(canzoni);
