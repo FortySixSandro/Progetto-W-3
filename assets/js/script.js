@@ -178,7 +178,7 @@ bottoneAggiungi.addEventListener('click', function () {
     }
 
     if (genere === 'tutti i generi') {
-        alert('Scegli prima un genere dal menu');
+        alert('Scegli prima un genere dal menu a tendina');
         return;
     }
 
