@@ -173,7 +173,7 @@ bottoneAggiungi.addEventListener('click', function () {
     const genere = selectGenere.value;
 
     if (parti.length < 2 || parti[0].trim() === '' || parti[1].trim() === '') {
-        alert('Scrivi nella barra: Artista - Titolo');
+        alert('Scrivi nella barra di ricerca: Artista - Titolo');
         return;
     }
 
