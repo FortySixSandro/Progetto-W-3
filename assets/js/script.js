@@ -69,9 +69,20 @@ function mostraCanzoni(lista) {
         cuore.className = (c.preferito ? 'fa-solid' : 'fa-regular') + ' fa-heart';
         bottone.appendChild(cuore);
 
+        const bottoneElimina = document.createElement('button');
+        bottoneElimina.className = 'elimina';
+        bottoneElimina.type = 'button';
+        bottoneElimina.dataset.id = c.id;
+        bottoneElimina.setAttribute('aria-label', `Elimina ${c.titolo}`);
+
+        const cestino = document.createElement('i');
+        cestino.className = 'fa-solid fa-trash';
+        bottoneElimina.appendChild(cestino);
+
         extra.appendChild(badge);
         extra.appendChild(creaStelle(c.voto));
         extra.appendChild(bottone);
+        extra.appendChild(bottoneElimina);
 
         canzone.appendChild(cover);
         canzone.appendChild(info);
@@ -142,6 +153,19 @@ bottoneTema.addEventListener('click', function () {
         ? '<i class="fa-solid fa-sun"></i>'
         : '<i class="fa-solid fa-moon"></i>';
 
+});
+
+contenitore.addEventListener('click', function (e) {
+    const bottone = e.target.closest('.elimina');
+    if (!bottone) return;
+
+    const id = Number(bottone.dataset.id);
+    const posizione = canzoni.findIndex(function (c) {
+        return c.id === id;
+    });
+
+    canzoni.splice(posizione, 1);
+    aggiorna();
 });
 
 bottoneAggiungi.addEventListener('click', function () {

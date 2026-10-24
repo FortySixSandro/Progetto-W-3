@@ -35,19 +35,20 @@ img {
     --stelle: #F59E0B;
     --badge-sfondo: #E0E7FF;
     --attivo-sfondo: #111827;
-    --attivo-testo: #fff;}
+    --attivo-testo: #fff;
+}
 
-:root.scuro{
---colore-principale: #818CF8;
---testo: #E5E7EB;
---testo-secondario: #6B7280;
---sfondo-pagina: #111827;
---sfondo-card: #1F2937;
---bordi: #374151;
---stelle: #F59E0B;
---badge-sfondo: #312E81;
---attivo-sfondo: #818CF8;
---attivo-testo: #F8FAFC;
+:root.scuro {
+    --colore-principale: #818CF8;
+    --testo: #E5E7EB;
+    --testo-secondario: #6B7280;
+    --sfondo-pagina: #111827;
+    --sfondo-card: #1F2937;
+    --bordi: #374151;
+    --stelle: #F59E0B;
+    --badge-sfondo: #312E81;
+    --attivo-sfondo: #818CF8;
+    --attivo-testo: #F8FAFC;
 }
 
 /**/
@@ -142,7 +143,7 @@ header {
     cursor: pointer;
 }
 
-.attivo{
+.attivo {
     background-color: var(--attivo-sfondo);
     color: var(--attivo-testo);
 }
@@ -172,7 +173,7 @@ header {
     border-radius: 6px;
 }
 
-.canzone-cover img:hover{
+.canzone-cover img:hover {
     transform: scaleX(-1);
     transition: all 0.4s cubic-bezier(.215, .61, .355, 1)
 }
@@ -204,12 +205,12 @@ header {
     border-radius: 12px;
 }
 
-.badge[data-genere = 'Rock']{
+.badge[data-genere='Rock'] {
     background-color: #e63946;
     color: var(--attivo-testo);
 }
 
-.badge[data-genere = 'Progressive Metal']{
+.badge[data-genere='Progressive Metal'] {
     background-color: var(--badge-sfondo);
     color: var(--testo);
 }
@@ -227,7 +228,20 @@ header {
     cursor: pointer;
 }
 
-.preferito:hover{
+.preferito:hover {
     font-size: 22px;
     transition: all 0.3s cubic-bezier(.215, .61, .355, 1)
+}
+
+.elimina {
+    margin-left: 8px;
+    font-size: 1rem;
+    color: var(--testo-secondario);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.elimina:hover {
+    color: #e63946;
 }
