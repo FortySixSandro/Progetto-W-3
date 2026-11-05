@@ -175,7 +175,7 @@ header {
 
 .canzone-cover img:hover {
     transform: scaleX(-1);
-    transition: all 0.4s cubic-bezier(.215, .61, .355, 1)
+    transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
 }
 
 .canzone-info {
